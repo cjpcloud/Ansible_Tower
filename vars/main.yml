@@ -1,0 +1,9 @@
+---
+# vars file for ansible-role-sqlserver
+keypair: teja-kiranaccount-2
+instance_type: t2.micro
+security_group: launch-wizard-3
+image: ami-0e7589a8422e3270f
+region: us-east-2
+subnet: subnet-c4e23dad
+
