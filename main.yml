@@ -1,0 +1,23 @@
+---
+-
+  hosts: localhost
+  name: Launching an EC2 Instance
+  gather_facts: false
+  vars:
+    keypair: teja-kiranaccount-2
+    instance_type: t2.micro
+    security_group: launch-wizard-3
+    image: ami-0e7589a8422e3270f
+    region: us-east-2
+  tasks:
+     - name: Launching an EC2 Instance
+       ec2:
+           instance_type: "{{ instance_type }}"
+           image: "{{ image }}"
+           region: "{{ region }}"
+           key_name: "{{ keypair }}"
+           count: 1
+           group: "{{ security_group }}"
+           wait: true
+           vpc_subnet_id: subnet-c4e23dad
+       register: ec2
