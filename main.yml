@@ -2,6 +2,6 @@
 - hosts: localhost
   tasks:
    - file:
-       path: /opt/test
+       path: /home/ec2-user/test
        state: touch
        mode: 0774
