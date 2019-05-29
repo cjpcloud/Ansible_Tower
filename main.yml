@@ -1,8 +1,7 @@
 ---
 - hosts: localhost
-  sudo: yes
   tasks:
    - file:
        path: /opt/test
-       state: directory
+       state: touch
        mode: 0774
